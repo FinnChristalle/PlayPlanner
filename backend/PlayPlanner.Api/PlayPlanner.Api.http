@@ -1,0 +1,6 @@
+@PlayPlanner.Api_HostAddress = http://localhost:5073
+
+GET {{PlayPlanner.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
