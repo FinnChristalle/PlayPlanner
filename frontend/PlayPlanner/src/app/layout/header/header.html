@@ -1,0 +1,24 @@
+<header
+	class="flex h-16 items-center justify-between border-b border-gray-200 bg-white px-4 sm:px-6"
+>
+	<div class="flex items-center gap-3">
+		<!-- Burger-Menü: nur auf Mobile sichtbar -->
+		<button
+			type="button"
+			class="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 md:hidden"
+			(click)="menuClick.emit()"
+			aria-label="Menü öffnen"
+		>
+			<span class="mb-0.5 block h-0.5 w-5 bg-current"></span>
+			<span class="mb-0.5 block h-0.5 w-5 bg-current"></span>
+			<span class="block h-0.5 w-5 bg-current"></span>
+		</button>
+
+		<span class="text-base font-semibold text-gray-900 sm:text-lg">PlayPlanner</span>
+	</div>
+
+	<!-- Rechts Platz für spätere Aktionen (Profil, etc.) -->
+	<div class="flex items-center gap-3">
+		<!-- TODO: Actions -->
+	</div>
+</header>

@@ -1,0 +1,32 @@
+<div class="flex min-h-screen bg-gray-50">
+	<!-- Mobile: Overlay + Sliding Sidebar -->
+	<div class="md:hidden">
+		<!-- Dunkler Overlay hinter dem Menü -->
+		<div
+			*ngIf="isSidebarOpen"
+			class="fixed inset-0 z-30 bg-black/50"
+			(click)="closeSidebar()"
+		></div>
+
+		<!-- Slide-in Sidebar: nur Position/Animation, Farben kommen aus Sidebar-Komponente -->
+		<app-sidebar
+			class="fixed inset-y-0 left-0 z-40 transform transition-transform duration-200"
+			[class.-translate-x-full]="!isSidebarOpen"
+			[class.translate-x-0]="isSidebarOpen"
+		></app-sidebar>
+	</div>
+
+	<!-- Desktop: Feste Sidebar links -->
+	<div class="hidden md:flex md:w-64 md:flex-col">
+		<app-sidebar />
+	</div>
+
+	<!-- Hauptbereich -->
+	<div class="flex flex-1 flex-col overflow-hidden">
+		<app-header (menuClick)="toggleSidebar()" />
+
+		<main class="flex-1 overflow-y-auto p-4 sm:p-6">
+			<router-outlet />
+		</main>
+	</div>
+</div>
