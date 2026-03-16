@@ -3,15 +3,17 @@ import { NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Header } from '../header/header';
 import { Sidebar } from '../sidebar/sidebar';
+import {PlayPlanner} from '../play-planner/play-planner';
 
 @Component({
   selector: 'app-app-shell',
   imports: [
-	    NgIf,
-	    RouterOutlet,
-	    Header,
-	    Sidebar
-	  ],
+    NgIf,
+    RouterOutlet,
+    Header,
+    Sidebar,
+    PlayPlanner
+  ],
   templateUrl: './app-shell.html',
   styleUrl: './app-shell.scss',
 })
